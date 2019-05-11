@@ -1,0 +1,160 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'Book_Ticket.ui'
+#
+# Created by: PyQt5 UI code generator 5.12
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+import os
+import sys
+
+
+class Ui_Dialog(object):
+    def setupUi(self, Dialog):
+        Dialog.setObjectName("Dialog")
+        Dialog.resize(800, 600)
+        self.label = QtWidgets.QLabel(Dialog)
+        self.label.setGeometry(QtCore.QRect(190, 30, 401, 51))
+        font = QtGui.QFont()
+        font.setPointSize(30)
+        self.label.setFont(font)
+        self.label.setObjectName("label")
+        self.textEdit = QtWidgets.QTextEdit(Dialog)
+        self.textEdit.setGeometry(QtCore.QRect(180, 170, 181, 31))
+        self.textEdit.setObjectName("textEdit")
+        self.textEdit_2 = QtWidgets.QTextEdit(Dialog)
+        self.textEdit_2.setGeometry(QtCore.QRect(410, 170, 181, 31))
+        self.textEdit_2.setObjectName("textEdit_2")
+        self.line = QtWidgets.QFrame(Dialog)
+        self.line.setGeometry(QtCore.QRect(120, 80, 521, 20))
+        self.line.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line.setObjectName("line")
+        self.label_2 = QtWidgets.QLabel(Dialog)
+        self.label_2.setGeometry(QtCore.QRect(180, 150, 63, 20))
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        self.label_2.setFont(font)
+        self.label_2.setObjectName("label_2")
+        self.label_3 = QtWidgets.QLabel(Dialog)
+        self.label_3.setGeometry(QtCore.QRect(410, 150, 63, 20))
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        self.label_3.setFont(font)
+        self.label_3.setObjectName("label_3")
+        self.label_4 = QtWidgets.QLabel(Dialog)
+        self.label_4.setGeometry(QtCore.QRect(370, 170, 21, 20))
+        self.label_4.setObjectName("label_4")
+        self.label_5 = QtWidgets.QLabel(Dialog)
+        self.label_5.setGeometry(QtCore.QRect(380, 180, 21, 20))
+        self.label_5.setObjectName("label_5")
+        # self.kdatewidget = KDateWidget(Dialog)
+        # self.kdatewidget.setGeometry(QtCore.QRect(250, 250, 341, 41))
+        # self.kdatewidget.setObjectName("kdatewidget")
+        self.label_6 = QtWidgets.QLabel(Dialog)
+        self.label_6.setGeometry(QtCore.QRect(180, 260, 61, 20))
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        self.label_6.setFont(font)
+        self.label_6.setObjectName("label_6")
+        self.comboBox = QtWidgets.QComboBox(Dialog)
+        self.comboBox.setGeometry(QtCore.QRect(330, 340, 261, 34))
+        self.comboBox.setObjectName("comboBox")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.label_7 = QtWidgets.QLabel(Dialog)
+        self.label_7.setGeometry(QtCore.QRect(180, 350, 61, 20))
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        self.label_7.setFont(font)
+        self.label_7.setObjectName("label_7")
+        self.line_2 = QtWidgets.QFrame(Dialog)
+        self.line_2.setGeometry(QtCore.QRect(180, 310, 411, 16))
+        self.line_2.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line_2.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_2.setObjectName("line_2")
+        self.pushButton = QtWidgets.QPushButton(Dialog)
+        self.pushButton.setGeometry(QtCore.QRect(250, 440, 291, 71))
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        font.setBold(False)
+        font.setWeight(50)
+        self.pushButton.setFont(font)
+        self.pushButton.setObjectName("pushButton")
+        self.pushButton.clicked.connect(self.trn)
+
+        self.line_3 = QtWidgets.QFrame(Dialog)
+        self.line_3.setGeometry(QtCore.QRect(180, 220, 411, 16))
+        self.line_3.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line_3.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_3.setObjectName("line_3")
+        self.line_4 = QtWidgets.QFrame(Dialog)
+        self.line_4.setGeometry(QtCore.QRect(120, 400, 521, 20))
+        self.line_4.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line_4.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_4.setObjectName("line_4")
+        self.dateEdit = QtWidgets.QDateEdit(Dialog)
+        self.dateEdit.setGeometry(QtCore.QRect(330, 260, 261, 31))
+        self.dateEdit.setObjectName("dateEdit")
+        # Dialog.setCentralWidget(Dialog)
+        # self.menubar = QtWidgets.QMenuBar(Dialog)
+        # self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 32))
+        # self.menubar.setObjectName("menubar")
+        # Dialog.setMenuBar(self.menubar)
+        # self.statusbar = QtWidgets.QStatusBar(Dialog)
+        # self.statusbar.setObjectName("statusbar")
+        # Dialog.setStatusBar(self.statusbar)
+
+
+
+        self.retranslateUi(Dialog)
+        QtCore.QMetaObject.connectSlotsByName(Dialog)
+
+    def trn(self): 
+        cmd='python3 Train_Found.py '+self.textEdit.toPlainText()+' '+self.textEdit_2.toPlainText()+' '+str(self.dateEdit.date().toPyDate())
+        os.system(cmd)  
+
+    def retranslateUi(self, Dialog):
+        _translate = QtCore.QCoreApplication.translate
+        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
+        self.label.setText(_translate("Dialog", "BOOK YOUR TICKET"))
+        self.label_2.setText(_translate("Dialog", "From :"))
+        self.label_3.setText(_translate("Dialog", "To :"))
+        self.label_4.setText(_translate("Dialog", "-->"))
+        self.label_5.setText(_translate("Dialog", "<--"))
+        self.label_6.setText(_translate("Dialog", "Date :"))
+        self.comboBox.setItemText(0, _translate("Dialog", "All Classes"))
+        self.comboBox.setItemText(1, _translate("Dialog", "Anubhuti Class (EA)"))
+        self.comboBox.setItemText(2, _translate("Dialog", "AC First Class (1A)"))
+        self.comboBox.setItemText(3, _translate("Dialog", "Exec. Chair Car (EC)"))
+        self.comboBox.setItemText(4, _translate("Dialog", "AC 3 Tier (2A)"))
+        self.comboBox.setItemText(5, _translate("Dialog", "First Class (FC)"))
+        self.comboBox.setItemText(6, _translate("Dialog", "AC 3 Tier (3A)"))
+        self.comboBox.setItemText(7, _translate("Dialog", "AC 3 Economy (3E)"))
+        self.comboBox.setItemText(8, _translate("Dialog", "AC Chair car (CC)"))
+        self.comboBox.setItemText(9, _translate("Dialog", "Sleeper (SL)"))
+        self.label_7.setText(_translate("Dialog", "Class :"))
+        self.pushButton.setText(_translate("Dialog", "Find Train"))
+
+
+# from kdatewidget import KDateWidget
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    Dialog = QtWidgets.QDialog()
+    ui = Ui_Dialog()
+    ui.setupUi(Dialog)
+    Dialog.show()
+    sys.exit(app.exec_())
